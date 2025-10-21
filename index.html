@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document title</title>
+    <title>Acessibilidade</title>
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/card.css">
 </head>
+
 <body>
     <div class="wrapper">
         <nav class="navbar">
             <ul>
-                <li><a href="#sobre-section"></a></li>
+                <li><a href="#sobre-section">SOBRE O PROJETO</a></li>
+                <li>ARTIGOS</li>
+                <li><a href="#cards-section">WCAG</a></li>
+                <li>PERSONAS</li>
             </ul>
         </nav>
 
-        <!--Sobre section-->
-        <h1 id="sobre-section"></h1>
+        <!-- Sobre -->
+        <section id="sobre-section">
+            <div>
+                <h1>SOBRE O PROJETO</h1>
+                <p>O [Nome do Projeto] é uma iniciativa focada em tornar experiências digitais mais inclusivas para
+                    todos os usuários, incluindo pessoas com deficiência visual, auditiva ou motora. O projeto oferece
+                    soluções práticas de acessibilidade, como navegação simplificada, contraste adequado, leitura de
+                    tela e suporte a teclas de atalho, garantindo que qualquer pessoa possa interagir com sites e
+                    aplicações de forma eficiente e confortável. Nosso objetivo é promover a inclusão digital, tornando
+                    a tecnologia acessível e igualitária para todos</p>
+                <div>
+        </section>
+
+        <!-- Cards -->
+        <section id="cards-section">
+            <h1>WCAG - Boas práticas de acessibilidade</h1>
+            <div id="card-container"></div>
+        </section>
     </div>
+
+    <script src="./data/cards.js"></script>
+    <script src="./index.js"></script>
 </body>
+
 </html>

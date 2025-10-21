@@ -1,0 +1,45 @@
+#card-container {
+  display: flex;
+  flex-wrap: wrap;          /* permite quebrar linha */
+  justify-content: flex-start; /* alinha à esquerda, mas centraliza com margin auto */
+  gap: 2rem;                /* espaço entre os cards */
+  max-width: 1000px;        /* container grande o suficiente para 3 cards de 300px + gaps */
+  margin: 0 auto;         /* centraliza o container na tela */
+}
+
+#cards-section h1 {
+  text-align: center; /* centraliza o título da seção */
+  margin-bottom: 2rem; /* espaçamento opcional abaixo do título */
+}
+
+
+.card {
+  width: 300px;             /* tamanho fixo do card */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  background-color: white;
+  border-top: 6px solid #ccc; /* será alterado pelo JS */
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.card .nivel {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  line-height: 1.5;
+  color: #333;
+}

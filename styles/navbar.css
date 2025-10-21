@@ -1,6 +1,37 @@
-.navbar{
-    background: black;
-    color: white;
-    width: 100%;
-    height: 4rem;
+.navbar {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 0 20rem; 
+  margin-top: 1rem;
+  color: #323232;
+  font-weight: bold;
+  box-sizing: border-box;
 }
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto; 
+  padding: 0;
+}
+
+.navbar ul li {
+  list-style: none;
+  border: 2px solid transparent;
+  padding: 1rem;
+  transition: border 0.3s; 
+}
+
+.navbar ul li:hover {
+  cursor: pointer;
+  border: 2px solid #599450;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
