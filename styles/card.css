@@ -1,25 +1,25 @@
 #card-container {
   display: flex;
-  flex-wrap: wrap;          /* permite quebrar linha */
-  justify-content: flex-start; /* alinha à esquerda, mas centraliza com margin auto */
-  gap: 2rem;                /* espaço entre os cards */
-  max-width: 1000px;        /* container grande o suficiente para 3 cards de 300px + gaps */
-  margin: 0 auto;         /* centraliza o container na tela */
+  flex-wrap: wrap;         
+  justify-content: flex-start;
+  gap: 2rem;                 
+  max-width: 1000px;         
+  margin: 0 auto;            
 }
 
 #cards-section h1 {
-  text-align: center; /* centraliza o título da seção */
-  margin-bottom: 2rem; /* espaçamento opcional abaixo do título */
+  text-align: center;       
+  margin-bottom: 2rem;       
+  transition: color 0.3s ease;
 }
 
-
 .card {
-  width: 300px;             /* tamanho fixo do card */
+  width: 300px;              
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   background-color: white;
   border-top: 6px solid #ccc; /* será alterado pelo JS */
   box-sizing: border-box;
@@ -42,4 +42,64 @@
 .card p {
   line-height: 1.5;
   color: #333;
+  transition: color 0.3s ease;
+}
+
+#filter-buttons {
+  display: flex;
+  justify-content: center; 
+  gap: 1rem;
+  margin: 1rem 0 2rem 0;    
+  width: 100%;              
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #333;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+.filter-btn.active {
+  background-color: #0078d7;
+  color: white;
+}
+
+body.dark-mode #cards-section h1 {
+  color: #f5f5f5;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+  color: #f5f5f5;
+  box-shadow: 0 4px 6px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .card p {
+  color: #ddd;
+}
+
+body.dark-mode .filter-btn {
+  border-color: #ddd;
+  background-color: #2d2d2d;
+  color: #f5f5f5;
+}
+
+body.dark-mode .filter-btn:hover {
+  background-color: #0078d7;
+  color: white;
+}
+
+body.dark-mode .filter-btn.active {
+  background-color: #005fa3;
+  color: white;
 }

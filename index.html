@@ -15,10 +15,21 @@
         <nav class="navbar">
             <ul>
                 <li><a href="#sobre-section">SOBRE O PROJETO</a></li>
-                <li>ARTIGOS</li>
+                <li class="dropdown">
+                    <span>ARTIGOS</span>
+                    <div class="dropdown-menu">
+                        <a href="#" target="_blank">Acessibilidade na Web</a>
+                        <a href="#" target="_blank">Boas Práticas WCAG</a>
+                        <a href="#" target="_blank">Inclusão Digital</a>
+                    </div>
+                </li>
                 <li><a href="#cards-section">WCAG</a></li>
                 <li>PERSONAS</li>
             </ul>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                <span class="icon">🌙</span>
+            </button>
         </nav>
 
         <!-- Sobre -->
@@ -37,6 +48,12 @@
         <!-- Cards -->
         <section id="cards-section">
             <h1>WCAG - Boas práticas de acessibilidade</h1>
+            <div id="filter-buttons">
+                <button class="filter-btn active" data-level="todos">Todos</button>
+                <button class="filter-btn" data-level="A">A</button>
+                <button class="filter-btn" data-level="AA">AA</button>
+                <button class="filter-btn" data-level="AAA">AAA</button>
+            </div>
             <div id="card-container"></div>
         </section>
     </div>
